@@ -14,11 +14,11 @@ struct persoon {
 };
 
 template<typename T>
-T grootste(T[], int len);
+T grootste(const T *, int len);
 double grootte(double n);
-int grootte(string s);
-int grootte(persoon & p);
-void initaliseer(persoon &,string, int, int);
+int grootte(const string &s);
+int grootte(const persoon & p);
+void initaliseer(persoon &,const string &, int, int);
 void print(const persoon & p);
 
 int main(int argc, char *argv[]) {
@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 }
 
 template<typename T>
-T grootste(T tab[], int len) {
+T grootste(const T * tab, int len) {
     T t = tab[0];
     for (int i = 1; i < len; i++) {
         if (grootte(t) < grootte(tab[i])) {
@@ -51,16 +51,16 @@ double grootte(double n) {
     return n;
 }
 
-int grootte(const string s) {
+int grootte(const string &s) {
     return s.length();
 }
 
-int grootte(persoon &p) {
+int grootte(const persoon &p) {
     return p.leeftijd;
 }
 
 
-void initaliseer(persoon & p,const string naam, int leeftijd, int lengte) {
+void initaliseer(persoon & p,const string & naam, int leeftijd, int lengte) {
     p.naam = naam;
     p.leeftijd = leeftijd;
     p.lengte = lengte;

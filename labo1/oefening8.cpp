@@ -4,9 +4,9 @@
 #include <iostream>
 using namespace std;
 
-void vul_array(int a[], int b[], int c[], int n, const function<int (int a, int b)>&f);
+void vul_array(const int a[],const int b[], int c[], int n, const function<int (int a, int b)>&f);
 
-void schrijf(const string &tekst, int t[], int n);
+void schrijf(const string &tekst,const int t[], int n);
 
 int main() {
     const int GROOTTE = 10;
@@ -35,7 +35,7 @@ int main() {
     return 0;
 }
 
-void schrijf(const string &tekst, int t[], int n) {
+void schrijf(const string &tekst,const int t[], int n) {
     cout << tekst;
     for (int i = 0; i < n; i++) {
         cout << t[i] << " ";
@@ -43,7 +43,7 @@ void schrijf(const string &tekst, int t[], int n) {
     cout << endl;
 }
 
-void vul_array(int a[], int b[], int c[], int n, const function<int(int a, int b)>& f) {
+void vul_array(const int a[],const int b[], int c[], int n, const function<int(int a, int b)>& f) {
     for (int i = 0 ; i < n; i++) {
         c[i] = f(a[i], b[i]);
     }

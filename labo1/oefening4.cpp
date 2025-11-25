@@ -13,6 +13,8 @@ int main(int argc, char *argv[]) {
     int len;
     cin >> len;
     while (len < 5 || len > 15) {
+        while (getchar() != '\n');
+        cin.clear();
         cout << "Fout" << endl;
         cin >> len;
     }
@@ -101,9 +103,15 @@ void splits_woorden(const string& zin, string tab[], int n, int &aantal) {
     }
 }
 
-
-//b) Gebruik c++ arrays zoals in c
-//c) min max zijn uitvoersparameters => gebruik geen raw pointers, maar de c++ stijl
-     //hoe worden strings vergeleken
-//d) controleer input!!
-//e) gebruik lidfuncties uit de klasse string
+// void splits_woorden(const string &zin, string *tab, int grootte, int &aantal) {
+//     aantal = 0;
+//     int start = 0;
+//     int p = zin.find(" ");
+//     while (aantal<grootte && p!=-1) {
+//         tab[aantal++] = zin.substr(start,p-start);
+//         start = p+1;
+//         p = zin.find(" ",start);
+//     }
+//     if (aantal<grootte)
+//         tab[aantal++] = zin.substr(start);
+// }
