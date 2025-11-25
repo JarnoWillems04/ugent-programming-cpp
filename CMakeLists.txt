@@ -12,3 +12,11 @@ add_executable(main theorie/h2/main.cpp)
 foreach(i RANGE 0 8)
     add_executable(oefening${i} labo1/oefening${i}.cpp)
 endforeach()
+
+foreach(i RANGE 9 10)
+    add_executable(oefening${i} labo2-smart-pointers/oefening${i}.cpp)
+endforeach()
+
+foreach(i RANGE 11 15)
+    add_executable(oefening${i} labo3-collections/oefening${i}.cpp)
+endforeach()
