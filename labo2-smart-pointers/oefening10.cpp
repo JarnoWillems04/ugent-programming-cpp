@@ -35,3 +35,15 @@ void dupliceer(vector<unique_ptr<T>> & v, int n) {
         }
     }
 }
+
+// template<typename T>
+// void dupliceer(vector<unique_ptr<T>> &v, int n) {
+//     int oorspr_grootte = v.size();
+//     v.resize(v.size()*n);
+//     for (int i=oorspr_grootte-1 ; i>=0 ; i--) {
+//         int pos = i*n;
+//         v[pos] = move(v[i]);
+//         for (int j = pos+1 ; j<pos+n ; j++)
+//             v[j] = make_unique<T>(*v[pos]);
+//     }
+// }

@@ -42,6 +42,26 @@ ostream& operator<<(ostream& out, const set<T> & s) {
     return out;
 }
 
+// // Set uitschrijven? als je komma's tussen de elementen wil
+// // (en geen komma meer na het laatste element),
+// // kan je geen gebruik maken van een for-each-lus.
+// // Er moet dus met een iterator gewerkt worden!
+// template<typename T>
+// ostream& operator<<(ostream &out, const set<T> &s) {
+//     if (s.size() == 0)
+//         out << "{ }";
+//     else {
+//         out << "{ ";
+//         typename set<T>::const_iterator it = s.begin();
+//         for (int i=0 ; i<s.size()-1 ; i++)
+//             out << *it++ << " , ";
+//         out << *it << " }";
+//     }
+//     out << endl;
+//     return out;
+// }
+
+
 int main() {
 
     // Vector van personen

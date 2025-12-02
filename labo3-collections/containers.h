@@ -9,7 +9,17 @@
 #include <vector>
 #include <map>
 #include <set>
+#include <unordered_set>
 using namespace std;
+
+template<typename T>
+ostream& operator<<(ostream &out, const vector<T> &v);
+
+template<typename K, typename V>
+ostream& operator<<(ostream& out, const map<K, V>& m);
+
+template<typename T>
+ostream& operator<<(ostream& out, const unordered_set<T> & s);
 
 template<typename T>
 ostream& operator<<(ostream &out, const vector<T> &v) {
@@ -18,7 +28,6 @@ ostream& operator<<(ostream &out, const vector<T> &v) {
     }
     return out;
 }
-
 
 template<typename K, typename V>
 ostream& operator<<(ostream& out, const map<K, V>& m) {
@@ -29,7 +38,7 @@ ostream& operator<<(ostream& out, const map<K, V>& m) {
 }
 
 template<typename T>
-ostream& operator<<(ostream& out, const set<T> & s) {
+ostream& operator<<(ostream& out, const unordered_set<T> & s) {
     for (const auto& elem : s) {
         out << "\"" << elem << "\", ";
     }

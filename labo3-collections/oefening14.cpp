@@ -1,8 +1,10 @@
+#include <unordered_set>
+
 #include "containers.h"
 
 int main(int argc, char *argv[]) {
 
-    map<char, set<string>> m;
+    map<char, unordered_set<string>> m;
 
     string s;
     cin >> s;
