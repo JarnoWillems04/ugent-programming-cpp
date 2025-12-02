@@ -20,3 +20,7 @@ endforeach()
 foreach(i RANGE 11 15)
     add_executable(oefening${i} labo3-collections/oefening${i}.cpp)
 endforeach()
+
+foreach(i RANGE 16 18)
+    add_executable(oefening${i} labo4-classes/oefening${i}.cpp)
+endforeach()
