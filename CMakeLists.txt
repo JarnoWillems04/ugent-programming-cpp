@@ -24,3 +24,11 @@ endforeach()
 foreach(i RANGE 16 18)
     add_executable(oefening${i} labo4-classes/oefening${i}.cpp)
 endforeach()
+
+foreach(i RANGE 19 24)
+    add_executable(oefening${i} labo5-overerving/oefening${i}.cpp)
+endforeach()
+
+foreach(i RANGE 25 29)
+    add_executable(oefening${i} labo6-exception-handling-afsluiter/oefening${i}.cpp)
+endforeach()

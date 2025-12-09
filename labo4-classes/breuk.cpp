@@ -46,15 +46,15 @@ void breuk::normaliseer() {
 
 
 ostream& operator<<(ostream &out, const breuk &b) {
-    cout << "[" << b.teller << "/" << b.noemer << "]";
+    out << "[" << b.teller << "/" << b.noemer << "]";
     return out;
 }
 
 istream& operator>>(istream &in, breuk &b) {
     int t;
     int n;
-    cin >> t;
-    cin >> n;
+    in >> t;
+    in >> n;
 
     b.teller = t;
     b.noemer = n;

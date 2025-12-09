@@ -8,3 +8,4 @@
  * toekenningsoperator
  * destructor
  */
+
