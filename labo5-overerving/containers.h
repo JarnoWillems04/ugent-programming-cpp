@@ -29,6 +29,7 @@ ostream& operator<<(ostream &out, const vector<T> &v) {
     for (const T& i : v) {
         out << i << " ";
     }
+    out << endl;
     return out;
 }
 

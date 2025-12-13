@@ -13,7 +13,7 @@ private:
 
 class B : public A {
 public:
-  //using A::A;
+  using A::A;
   //  wat indien je onderstaande constructor toevoegt en using in commentaar zet?
   //B(int vB) : varB(vB) {}
   // wat indien je beiden voorziet (using + constructor)?
