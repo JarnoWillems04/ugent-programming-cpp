@@ -11,7 +11,7 @@ public:
     int oppervlakte() const;
     virtual void print(ostream &) const;
     friend ostream& operator<<(ostream &, const rechthoek &);
-protected:
+protected: //protected zodat lid functie van vierkant hier aan kan
     int hoogte;
     int breedte;
 };
